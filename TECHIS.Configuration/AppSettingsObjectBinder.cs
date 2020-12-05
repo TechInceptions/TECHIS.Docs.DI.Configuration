@@ -8,10 +8,6 @@ namespace TECHIS.Configuration.DependencyInjection
 {
     public static class AppSettingsObjectBinder
     {
-        public static IServiceCollection Bind(this IServiceCollection services, IConfiguration configuration)
-        {
-            return services;
-        }
 
         public static IServiceCollection AddConfig<T>(this IServiceCollection services, IConfiguration configuration) where T : class, new()
         {
@@ -21,6 +17,11 @@ namespace TECHIS.Configuration.DependencyInjection
         {
             T configObject = configuration.GetSection(sectionName)?.Get<T>() ?? new T();
             
+            if (configObject is ServiceConfigurationBase serviceConfiguration )
+            {
+                serviceConfiguration.PreValidate();
+            }
+
             services.AddSingleton(configObject);
 
             return services;
