@@ -23,7 +23,7 @@ namespace TECHIS.Docs.AzureApp
         [FunctionName(nameof(ICustomerService.GetCustomer))]
         public async Task<IActionResult> GetCustomer([HttpTrigger(AuthorizationLevel.Function, "get", Route = null)] HttpRequest req, ILogger log)
         {
-            log.LogInformation("C# HTTP trigger function processed a request.");
+            log.LogInformation($"{nameof(HttpRequest)}:{nameof(ICustomerService.GetCustomer)}");
 
             if (long.TryParse(req.Query["id"], out var id))
             {

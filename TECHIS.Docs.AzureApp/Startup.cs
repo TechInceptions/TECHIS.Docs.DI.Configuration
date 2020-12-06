@@ -20,8 +20,8 @@ namespace TECHIS.Docs.AzureApp
         {
             var configuration = builder.GetContext().Configuration;
 
-            builder.Services.AddConfig<CustomerRepositoryConfig>(configuration)
-                            .AddConfig<CustomerServiceConfig>(configuration)
+            builder.Services.AddConfig<Services.Config.CustomerRepository>(configuration)
+                            .AddConfig<Services.Config.CustomerService>(configuration)
 
                             .AddScoped<ICustomerService, CustomerService>()
                             .AddScoped<IRepository<long>, CustomerRepository>();
