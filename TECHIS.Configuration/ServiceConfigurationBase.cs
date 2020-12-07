@@ -38,7 +38,7 @@ namespace TECHIS.Configuration
                 return (prop.Name, IsValid: true);
             });
 
-            var isValid = results.Any(result => !result.IsValid);
+            var isValid = results.All(result => result.IsValid);
 
             if (throwOnFailure && !isValid)
             {
