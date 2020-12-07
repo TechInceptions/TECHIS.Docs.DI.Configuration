@@ -21,7 +21,7 @@ namespace TECHIS.Docs.AzureApp
         }
 
         [FunctionName(nameof(ICustomerService.GetCustomer))]
-        public async Task<IActionResult> GetCustomer([HttpTrigger(AuthorizationLevel.Function, "get", Route = null)] HttpRequest req, ILogger log)
+        public async Task<IActionResult> GetCustomer([HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req, ILogger log)
         {
             log.LogInformation($"{nameof(HttpRequest)}:{nameof(ICustomerService.GetCustomer)}");
 

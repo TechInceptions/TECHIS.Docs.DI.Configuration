@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TECHIS.Configuration", "TECHIS.Configuration\TECHIS.Configuration.csproj", "{2D14A8A2-8A0D-4F14-860D-4B7C1182E51D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TECHIS.Docs.Services", "TECHIS.Docs.Services\TECHIS.Docs.Services.csproj", "{CBDD6FD2-E816-448A-91FF-121A5C7851F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TECHIS.Docs.Services", "TECHIS.Docs.Services\TECHIS.Docs.Services.csproj", "{CBDD6FD2-E816-448A-91FF-121A5C7851F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TECHIS.Docs.AzureApp", "TECHIS.Docs.AzureApp\TECHIS.Docs.AzureApp.csproj", "{4150DB24-4179-4871-A025-D4B9EF4C397D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TECHIS.Docs.AzureApp", "TECHIS.Docs.AzureApp\TECHIS.Docs.AzureApp.csproj", "{4150DB24-4179-4871-A025-D4B9EF4C397D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
